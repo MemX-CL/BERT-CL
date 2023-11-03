@@ -28,6 +28,9 @@ WARNING: Names/Parameters That You Should Keep The Same as That in Pretrain Stag
 4. ONLY_LAST_LAYER: should be same as ONLY_LAST_LAYER in stage 1 (MUST set this to be same in stage 1 if you want to correctly replay)
 
 Also, Remember to set REPLAY=True/False, when you do/do not want to replay
+
+Current Strategy is to replay every epoch (not step, that is, not every batch)
+You can change the position of REPLAY code to be included in the inner loop to perform batch-wise replay
 """
 
 
