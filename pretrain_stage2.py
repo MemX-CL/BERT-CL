@@ -20,6 +20,17 @@ from Dataset import ACLForLM, ReplayDataset, MixedData
 from utils import *
 
 
+"""
+WARNING: Names/Parameters That You Should Keep The Same as That in Pretrain Stage 1
+1. LOAD_FOLDER: should be same as STORE_FOLDER in stage 1
+2. REPLAY_FILE: should be same as REPLAY_FILE in stage 1
+3. NUM_REPLAY_LAYERS: should be same as NUM_REPLAY_LAYERS in stage 1 (especially if you choose to replay but not only on last layer)
+4. ONLY_LAST_LAYER: should be same as ONLY_LAST_LAYER in stage 1 (MUST set this to be same in stage 1 if you want to correctly replay)
+
+Also, Remember to set REPLAY=True/False, when you do/do not want to replay
+"""
+
+
 # replay config
 REPLAY = False
 NUM_REPLAY_LAYERS = 12

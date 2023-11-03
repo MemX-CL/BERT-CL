@@ -24,6 +24,13 @@ from utils import *
 # If you have finished pretrain, you can load it
 LOAD_CHECKPOINT = True
 
+# replay config
+NUM_REPLAY_LAYERS = 12 # range from 1-12, this layer range start from the lowest (layer 0)
+ONLY_LAST_LAYER = False # set true will disable NUM_LAYERS
+NUM_CLUSTERS = 8 # number of clusters that you want layer output to make
+DATA_PER_CLUSTER = 8 # number of samples of each cluster
+SAMPLE_BATCHES = 20 # the amount of data that you want to sample from 
+
 # train and validation size for pretrain
 TRAIN_LEN = 10000
 VAL_LEN = 500
@@ -35,12 +42,6 @@ REPLAY_FILE = 'replay-data-12s-8*8.pth'
 REPLAY_FILE_PATH = os.path.join(STORE_PATH, REPLAY_FILE)
 CONFIG_PATH = 'config/bert.json'
 
-# layers to generate fake data 
-NUM_REPLAY_LAYERS = 12 # range from 1-12, this layer range start from the lowest (layer 0)
-ONLY_LAST_LAYER = False # set true will disable NUM_LAYERS
-NUM_CLUSTERS = 8
-DATA_PER_CLUSTER = 8
-SAMPLE_BATCHES = 20
 
 # training parameters
 num_epochs = 50
