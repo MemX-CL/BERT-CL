@@ -1,4 +1,5 @@
 """
+Pretrain Stage1
 There are two Functions implemented in this code:
 1. pretrain a BERT in stage1
 2. use this pretrained BERT to generate fake data for stage 2 replay
