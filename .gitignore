@@ -1,0 +1,8 @@
+# ignore folders
+outputs/
+log/
+pretrained/
+__pycache__/
+data/
+
+.DS_Store
